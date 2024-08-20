@@ -1,0 +1,11 @@
+.checkboxesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.btnContainer {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}

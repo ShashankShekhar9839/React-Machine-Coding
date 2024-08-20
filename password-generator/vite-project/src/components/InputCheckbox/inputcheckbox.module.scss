@@ -1,0 +1,41 @@
+.tickContainerWrapper {
+  height: auto;
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid gray;
+  display: inline-block;
+  border-radius: 4px;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tickActive {
+  background-color: black;
+  color: white;
+}
+
+.tickContainerWrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    margin-right: 8px;
+  }
+  
+  .label {
+    font-size: 16px;
+  }
+  
+  .checked {
+    color: green;
+  }
+  
+  .unchecked {
+    color: black;
+  }
+  

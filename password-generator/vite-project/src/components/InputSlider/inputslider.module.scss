@@ -1,0 +1,14 @@
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slider {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .sliderValue {
+    font-size: 14px;
+  }
