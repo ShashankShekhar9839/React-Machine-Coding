@@ -9,7 +9,7 @@ const InputSlider = (props) => {
     const newValue = event.target.value;
     setSliderValue(newValue);
     if (onChange) {
-      onchange(newValue);
+      onChange(newValue);
     }
   };
 
