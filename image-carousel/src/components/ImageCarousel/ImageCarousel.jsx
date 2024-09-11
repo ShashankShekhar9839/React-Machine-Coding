@@ -1,6 +1,5 @@
 import React, { Children, cloneElement, useEffect } from "react";
 import "./imageCarousel.css";
-import Card from "../Card";
 
 const ImageCarousel = (props) => {
   const { oneViewCount, children } = props;
@@ -9,10 +8,12 @@ const ImageCarousel = (props) => {
   const styledChildren = Children.map(children, (child) =>
     cloneElement(child, {
       style: {
-        width: `${widthOfEachChildren}%`,
+        width: `200px`,
       },
     })
   );
+  console.log("####", styledChildren);
+
   return <div className="image-carousel-wrapper">{styledChildren}</div>;
 };
 
