@@ -1,0 +1,8 @@
+.employee-list-wrapper {
+  max-width: 300px;
+  padding: 6px;
+  background: rgb(228, 221, 221);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+}
