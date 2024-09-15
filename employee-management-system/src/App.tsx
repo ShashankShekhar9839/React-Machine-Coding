@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./App.css";
 import ListCard from "./components/ListCard";
 import { data } from "../src/data/data.js";
+import { EmployeeContext } from "./context/EmployeeContext.js";
 
 function App() {
-  const [employeeList, setEmployeeList] = useState(data);
+  const { employees, setEmployees } = useContext(EmployeeContext);
   useEffect(() => {
-    console.log(employeeList);
-  }, [employeeList]);
+    console.log(employees);
+  }, [employees]);
   return (
     <div>
-      {/* {employeeList.map((employee) => (
-        <ListCard employeeName={employee.firstName} />
-      ))} */}
+      {employees.map((employee: object) => (
+        <ListCard
+         employee={employee}
+        />
+      ))}
     </div>
   );
 }
