@@ -1,42 +1,30 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../css/listCard.css";
 import { EmployeeContext } from "../context/EmployeeContext";
+import EmployeeDetails from "./EmployeeDetails";
 
 interface ListCardProps {
   employeeName: string;
-  dataSet: Number;
+  onEmpoyeeClick: (employee: any) => void;
 }
 
-const ListCard: React.FC<ListCardProps> = ({ employee }) => {
-  const { employees, setEmployees } = useContext(EmployeeContext);
-  const [activeEmployee, setActiveEmployee] = useState(employees[0]);
+const ListCard: React.FC<ListCardProps> = ({ employee, onEmployeeClick }) => {
+  const { firstName, lastName, id } = employee;
+  const { setEmployees } = useContext(EmployeeContext);
+
   const handleEmployeeDelete = (event) => {
     event?.stopPropagation();
     const employeeId = Number(event.currentTarget.parentElement?.dataset.id);
-    setEmployees(employees.filter((employee) => employee.id !== employeeId));
-  };
-
-  const handleEmployeeClick = (event) => {
-    event.stopPropagation();
-    // Use find instead of filter to get a single employee object
-    const selectedEmployee = employees.find(
-      (employee) => employee.id === Number(event.currentTarget.dataset.id)
+    setEmployees((prevEmployees) =>
+      prevEmployees.filter((emp) => emp.id !== employeeId)
     );
-
-    setActiveEmployee(selectedEmployee || employees[0]);
   };
-
-  useEffect(() => {
-    // console.log("###");s
-  }, [activeEmployee]);
-
-  const { firstName, lastName, id } = employee;
 
   return (
     <div
       className="employee-list-wrapper"
       data-id={id}
-      onClick={handleEmployeeClick}
+      onClick={() => onEmployeeClick(employee)}
     >
       <span>
         {firstName} {lastName}

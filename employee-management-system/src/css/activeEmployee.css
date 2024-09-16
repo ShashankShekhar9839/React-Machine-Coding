@@ -1,0 +1,13 @@
+.active-employee-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.employee-image {
+  height: 200px;
+  aspect-ratio: (16/9);
+}
