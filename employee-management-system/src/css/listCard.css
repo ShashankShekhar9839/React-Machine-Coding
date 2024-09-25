@@ -1,0 +1,13 @@
+.employee-list-wrapper {
+  max-width: 300px;
+  padding: 6px;
+  background: rgba(241, 237, 237, 0.901);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.employee-list-wrapper:hover {
+  cursor: pointer;
+}
