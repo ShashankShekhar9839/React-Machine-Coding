@@ -1,0 +1,43 @@
+.draggable-wrapper {
+  display: inline-block;
+  position: relative;
+  background-color: teal;
+  top: 40px;
+  font-size: 20px;
+  max-width: 150px;
+  border-radius: 12px;
+  height: 40px;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftDirectionClasses {
+  left: 0;
+}
+
+.rightDirectionClasses {
+  right: 0;
+}
+
+.decreaseWidth {
+  animation: decreaseWidth 1s linear forwards;
+}
+
+@keyframes decreaseWidth {
+  0% {
+    width: 150px;
+    border-radius: 12px;
+  }
+  99% {
+    width: 40px;
+    border-radius: 12px;
+  }
+  100% {
+    width: 40px;
+    border-radius: 100%;
+  }
+}

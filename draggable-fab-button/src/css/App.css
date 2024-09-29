@@ -1,0 +1,9 @@
+.app-container {
+  height: 620px;
+  width: 360px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4%;
+  border: 1px solid black;
+}

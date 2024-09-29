@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle to Circle Animation</title>
+    <style>
+      .circle-animate {
+        display: inline-block;
+        white-space: nowrap;
+        width: 200px;
+        padding: 5px;
+        font-size: 20px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 10px;
+        position: relative;
+        transform-origin: right; /* Anchor the shrink effect to the right */
+      }
+
+      @keyframes shrinkToCircle {
+        0% {
+          width: 200px; /* Start with auto width */
+          border-radius: 10px;
+        }
+
+        90% {
+          width: 50px;
+          border-radius: 10px;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+        }
+      }
+
+      .circle-animate:hover {
+        animation: shrinkToCircle 1s forwards; /* 2s total animation time */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle-animate">Hello World</div>
+  </body>
+</html>
