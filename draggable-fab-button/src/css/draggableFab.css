@@ -1,6 +1,5 @@
 .draggable-wrapper {
   display: inline-block;
-  position: relative;
   background-color: teal;
   top: 40px;
   font-size: 20px;
